@@ -1,7 +1,9 @@
 VMetrics
 ========
 
-Metrics library specifically for use with ProjectV, but readily available for general use
+Metrics library specifically for use with ProjectV, but readily available for general use.
+
+Note: This library is NOT platform-agnostic. Windows-only, folks.
 
 VTimer
 ======

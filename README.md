@@ -10,7 +10,7 @@ To use VTimer, make sure include is specified in your project's include path, an
 
 Sample code:
 ------------
-```
+```C++
 VTimer tempTimer; // Sets up a VTimer object. Creates it's own reference point
 double currentTime = 0.0; // Assign time values to some variable, can be a double, size_t, int, whatever.
 

@@ -6,34 +6,34 @@
 
 #include <windows.h>
 
-class VTimer
+VMETRICS_API class VTimer
 {
 public:
 
-	VMETRICS_API VTimer();
+	VTimer();
 
-	VMETRICS_API ~VTimer(){};
+	~VTimer(){};
 
 	// Resets the timer's reference point to "now"
-	void VMETRICS_API setStartTick();
+	void setStartTick();
 
 	// Returns time in us since last tick
-	double VMETRICS_API tick();
+	double tick();
 
 	// Time in microseconds 
-	double VMETRICS_API time_u();
+	double time_u();
 
 	// Time in milliseconds
-	double VMETRICS_API time_ms();
+	double time_ms();
 
 	// Time in seconds
-	double VMETRICS_API time_s();
+	double time_s();
 
 	// Time in minutes
-	double VMETRICS_API time_m();
+	double time_m();
 
 	// Time in hours
-	double VMETRICS_API time_h();
+	double time_h();
 
 private:
 	LARGE_INTEGER m_baseTime;

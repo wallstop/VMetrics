@@ -4,7 +4,7 @@
 #define VMETRICS_API __declspec(dllimport)
 #endif
 
-#include <windows.h>
+#include <stdint.h>
 
 VMETRICS_API class VTimer
 {
@@ -36,9 +36,9 @@ public:
 	double time_h();
 
 private:
-	LARGE_INTEGER m_baseTime;
-	LARGE_INTEGER m_currentTime;
-	LARGE_INTEGER m_clockFrequency;
+	uint_fast64_t m_baseTime;
+	uint_fast64_t m_currentTime;
+	uint_fast64_t m_clockFrequency;
 
-	LARGE_INTEGER m_tickTime;
+	uint_fast64_t m_tickTime;
 };

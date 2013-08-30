@@ -6,7 +6,7 @@
 
 #include <stdint.h>
 
-VMETRICS_API class VTimer
+class VMETRICS_API VTimer
 {
 public:
 
@@ -17,28 +17,27 @@ public:
 	// Resets the timer's reference point to "now"
 	void setStartTick();
 
-	// Returns time in us since last tick
-	double tick();
+	// Returns time since baseTime
+	const double tick();
 
 	// Time in microseconds 
-	double time_u();
+	const double time_u();
 
 	// Time in milliseconds
-	double time_ms();
+	const double time_ms();
 
 	// Time in seconds
-	double time_s();
+	const double time_s();
 
 	// Time in minutes
-	double time_m();
+	const double time_m();
 
 	// Time in hours
-	double time_h();
+	const double time_h();
 
 private:
 	uint_fast64_t m_baseTime;
 	uint_fast64_t m_currentTime;
 	uint_fast64_t m_clockFrequency;
 
-	uint_fast64_t m_tickTime;
 };

@@ -42,11 +42,11 @@ tempTimer.setStartTick();
   // Do some stuff
 }
 // Pretend you want to know exactly how long the following code takes, but don't want to reset your timer.
-tempTimer.tick();
+stopWatch = tempTimer.time_u();
 {
   // Do some more stuff
 }
-stopWatch = tempTimer.tick(); //Returns the time in microseconds since the last .tick() or initialization
+stopWatch = tempTimer.time_u() - stopWatch; //Returns the time in microseconds since the last .tick() or initialization
 
 {
   // Continue doing things

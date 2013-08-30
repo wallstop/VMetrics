@@ -3,12 +3,14 @@ VMetrics
 
 Metrics library specifically for use with ProjectV, but readily available for general use.
 
-Note: This library is NOT platform-agnostic. Windows-only, folks.
+Note: Currently only supports Windows, future Linux + other support coming.
+
+Debug libraries / dlls are of the form *D.lib, *D.dll.
 
 VTimer
 ======
 
-To use VTimer, make sure include is specified in your project's include path, and lib in your project's library path.
+To use VTimer, make sure include is specified in your project's include path, and lib in your project's library path. 
 
 Sample Code:
 ------------

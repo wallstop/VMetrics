@@ -3,12 +3,14 @@ VMetrics
 
 Metrics library specifically for use with ProjectV, but readily available for general use.
 
-Note: This library is NOT platform-agnostic. Windows-only, folks.
+Note: Currently only supports Windows, future Linux + other support coming.
+
+Debug libraries / dlls are of the form *D.lib, *D.dll.
 
 VTimer
 ======
 
-To use VTimer, make sure include is specified in your project's include path, and lib in your project's library path.
+To use VTimer, make sure include is specified in your project's include path, and lib in your project's library path. 
 
 Sample Code:
 ------------
@@ -40,11 +42,11 @@ tempTimer.setStartTick();
   // Do some stuff
 }
 // Pretend you want to know exactly how long the following code takes, but don't want to reset your timer.
-tempTimer.tick();
+stopWatch = tempTimer.time_u();
 {
   // Do some more stuff
 }
-stopWatch = tempTimer.tick(); //Returns the time in microseconds since the last .tick() or initialization
+stopWatch = tempTimer.time_u() - stopWatch; //Returns the time in microseconds since the last .tick() or initialization
 
 {
   // Continue doing things
